@@ -1,0 +1,26 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.21.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - atom-mocha-test-runner > mocha > debug:
+        patched: '2021-08-23T21:58:04.207Z'
+    - standard > eslint > debug:
+        patched: '2021-08-23T21:58:04.207Z'
+  'npm:hoek:20180212':
+    - atom-mocha-test-runner > less > request > hawk > hoek:
+        patched: '2021-08-23T21:58:04.207Z'
+    - atom-mocha-test-runner > less > request > hawk > boom > hoek:
+        patched: '2021-08-23T21:58:04.207Z'
+    - atom-mocha-test-runner > less > request > hawk > sntp > hoek:
+        patched: '2021-08-23T21:58:04.207Z'
+    - atom-mocha-test-runner > less > request > hawk > cryptiles > boom > hoek:
+        patched: '2021-08-23T21:58:04.207Z'
+  SNYK-JS-LODASH-567746:
+    - standard > eslint > lodash:
+        patched: '2021-08-23T21:58:04.207Z'
+    - standard > eslint > inquirer > lodash:
+        patched: '2021-08-23T21:58:04.207Z'
+    - standard > eslint > table > lodash:
+        patched: '2021-08-23T21:58:04.207Z'
