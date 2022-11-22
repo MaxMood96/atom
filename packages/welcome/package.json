@@ -11,7 +11,9 @@
   },
   "scripts": {
     "lint": "standard",
-    "test": "atom --test test/*.test.js"
+    "test": "atom --test test/*.test.js",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "consumedServices": {
     "metrics-reporter": {
@@ -39,15 +41,17 @@
     "SunsettingView": "createSunsettingView"
   },
   "dependencies": {
-    "etch": "0.9.0"
+    "etch": "0.9.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "atom-mocha-test-runner": "^1.0.0",
-    "standard": "^8.6.0"
+    "standard": "^11.0.0"
   },
   "standard": {
     "globals": [
       "atom"
     ]
-  }
+  },
+  "snyk": true
 }
