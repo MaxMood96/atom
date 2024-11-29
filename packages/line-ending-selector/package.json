@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "atom-select-list": "^0.7.0",
-    "underscore-plus": "^1.7.0"
+    "underscore-plus": "^1.7.0",
+    "@snyk/protect": "latest"
   },
   "consumedServices": {
     "status-bar": {
@@ -20,7 +21,7 @@
     }
   },
   "devDependencies": {
-    "standard": "^5.1.0"
+    "standard": "^6.0.0"
   },
   "configSchema": {
     "defaultLineEnding": {
@@ -51,5 +52,10 @@
       "waitsFor",
       "waitsForPromise"
     ]
-  }
+  },
+  "scripts": {
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true
 }
